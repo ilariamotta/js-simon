@@ -1,9 +1,11 @@
 const countdown = document.querySelector("#countdown")
 const numMem = document.querySelector("#numMem");
+const sezInput = document.querySelector("#form-input");
+const sezOutput = document.querySelector("#out");
 
 const form = document.querySelector("form");
 const btn = document.querySelector("button");
-const numIndovinati = document.querySelector("#numInd")
+const numIndovinati = document.querySelector("#numInd");
 
 //NUMERI INPUT
 const numInputOne = document.querySelector("#n1");
@@ -55,6 +57,9 @@ const intervalId = setInterval(function () {
         clearInterval(intervalId);
         countdown.classList.add("d-none");
         numMem.classList.add("d-none");
+        sezInput.classList.remove("d-none");
+        
+
 
     }
 }, 1000);
@@ -66,7 +71,6 @@ let numOk = [];
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 const numUtente = [parseInt(numInputOne.value), parseInt(numInputTwo.value), parseInt(numInputThree.value), parseInt(numInputFour.value), parseInt(numInputFive.value)];
-
 for (let i = 0; i < numGen.length; i++) {
     for (let j = 0; j < numUtente.length; j++) {
         if (numGen[i] === numUtente[j]) {
@@ -76,6 +80,7 @@ for (let i = 0; i < numGen.length; i++) {
         }
     }
 }
+sezOutput.classList.remove("d-none");
 numIndovinati.innerHTML = `${result} numeri &#40;${numOk}&#41;`;
 });
 
