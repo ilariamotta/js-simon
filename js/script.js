@@ -27,7 +27,7 @@ for (let i = 0; i < 5; i++) {
     const num = Math.floor(Math.random() * 99) + 1;
     if (!numGen.includes(num)) {
         numGen.push(num);
-    } if (numGen.length === 5){
+    } if (numGen.length === 5) {
         break;
     }
 
@@ -61,16 +61,18 @@ const intervalId = setInterval(function () {
 
 
 
-// form.addEventListener("submit", function (event) {
-// event.preventDefault();
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+const numUtente = [parseInt(numInputOne.value), parseInt(numInputTwo.value), parseInt(numInputThree.value), parseInt(numInputFour.value), parseInt(numInputFive.value)];
 
-// for (i = 0; i < arrayMemo.length; i++) {
-    
-//     }
-// }
+for (let i = 0; i < numGen.length; i++) {
+    for (let j = 0; i < numUtente.length; i++) {
+        if (numGen[i] === numUtente[j]) {
 
-
-// });
+        }
+    }
+}
+});
 
 
 
