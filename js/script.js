@@ -1,3 +1,5 @@
+const countdown = document.querySelector("#countdown")
+
 const memo1 = document.querySelector("#memo1")
 const memo2 = document.querySelector("#memo2")
 const memo3 = document.querySelector("#memo3")
@@ -10,7 +12,22 @@ memo3.innerHTML = Math.floor(Math.random() * 99) + 1;
 memo4.innerHTML = Math.floor(Math.random() * 99) + 1;
 memo5.innerHTML = Math.floor(Math.random() * 99) + 1;
 
-console.log(memo1, memo2, memo3, memo4, memo5);
+let count = 30;
+countdown.innerHTML = 30;
+const intervalId = setInterval(function () {
+    if (count > 0) {
+        count--;
+        countdown.innerHTML = count;
+
+    } else if (count === 0) {
+        countdown.innerHTML = "STOP AL TEMPO";
+        clearInterval(intervalId)
+
+    }
+
+}, 1000);
+
+
 
 
 
