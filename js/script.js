@@ -3,6 +3,7 @@ const numMem = document.querySelector("#numMem");
 
 const form = document.querySelector("form");
 const btn = document.querySelector("button");
+const numIndovinati = document.querySelector("#numInd")
 
 //NUMERI INPUT
 const numInputOne = document.querySelector("#n1");
@@ -59,19 +60,23 @@ const intervalId = setInterval(function () {
 }, 1000);
 
 
-
+let result = 0;
+let numOk = [];
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 const numUtente = [parseInt(numInputOne.value), parseInt(numInputTwo.value), parseInt(numInputThree.value), parseInt(numInputFour.value), parseInt(numInputFive.value)];
 
 for (let i = 0; i < numGen.length; i++) {
-    for (let j = 0; i < numUtente.length; i++) {
+    for (let j = 0; j < numUtente.length; j++) {
         if (numGen[i] === numUtente[j]) {
-
+            result++;
+            numOk.push(numGen[i])
+            
         }
     }
 }
+numIndovinati.innerHTML = `${result} numeri &#40;${numOk}&#41;`;
 });
 
 
