@@ -2,6 +2,8 @@ const countdown = document.querySelector("#countdown")
 const numMem = document.querySelector("#numMem");
 const sezInput = document.querySelector("#form-input");
 const sezOutput = document.querySelector("#out");
+const imgCless = document.querySelector("#clessidra")
+
 
 const form = document.querySelector("form");
 const btn = document.querySelector("button");
@@ -58,6 +60,7 @@ const intervalId = setInterval(function () {
         countdown.classList.add("d-none");
         numMem.classList.add("d-none");
         sezInput.classList.remove("d-none");
+        imgCless.classList.add("d-none")
         
 
 
@@ -70,6 +73,7 @@ let numOk = [];
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+    btn.innerHTML = "Ecco qua!"
 const numUtente = [parseInt(numInputOne.value), parseInt(numInputTwo.value), parseInt(numInputThree.value), parseInt(numInputFour.value), parseInt(numInputFive.value)];
 for (let i = 0; i < numGen.length; i++) {
     for (let j = 0; j < numUtente.length; j++) {
@@ -82,6 +86,8 @@ for (let i = 0; i < numGen.length; i++) {
 }
 sezOutput.classList.remove("d-none");
 numIndovinati.innerHTML = `${result} numeri &#40;${numOk}&#41;`;
+btn.innerHTML = "Vuoi riprovare?"
+
 });
 
 

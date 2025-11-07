@@ -1,0 +1,19 @@
+body {
+    background-image: url(../img/vecteezy_blank-checked-copy-book-pattern-for-math-practice-seamless_.jpg) ;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+#clessidra {
+    width: 100px;
+    height: auto;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+#numInd {
+    font-size: 2rem;
+}
+

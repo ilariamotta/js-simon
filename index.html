@@ -16,15 +16,18 @@
             <!-- SEZIONE TITOLO E NUMERI -->
             <div class="col-12 d-flex flex-column align-items-center text-center">
 
-                <h1 class="mt-4 mb-3">TESTA LA TUA MEMORIA!</h1>
+                <h1 class="mt-4 mb-3 display-1">TESTA LA TUA MEMORIA!</h1>
 
                 <!-- COUNTDOWN -->
         
-                <h2 id="countdown" class="mb-3"></h2>
+                <h2 id="countdown" class="mb-3 display-2 text-danger"></h2>
+                <img id="clessidra" src="https://cdn.pixabay.com/animation/2023/10/24/13/54/13-54-26-419_512.gif" alt="" class="">
+               
 
                 <!-- NUMERI DA RICORDARE -->
                 
                 <div id="numMem" class="d-flex justify-content-center gap-3 mb-5">
+                     
                     <h3 id="memo1"></h3>
                     <h3 id="memo2"></h3>
                     <h3 id="memo3"></h3>
@@ -36,8 +39,8 @@
             <!-- SEZIONE UTENTE INPUT -->
             <div id="form-input" class="d-none col-12 d-flex flex-column align-items-center text-center">
 
-                <h4>Inserisci tutti i numeri che ricordi!</h4>
-                <p>(l'ordine non è importante)</p>
+                <h4 class="display-3">Inserisci tutti i numeri che ricordi!</h4>
+                <p><strong>(l'ordine non è importante)</strong></p>
 
                 <form class="mt-3">
                     <label for="n1" class="form-control-sm"></label>
@@ -64,12 +67,15 @@
 
             <!-- SEZIONE OUTPUT -->
             <div id="out" class="d-none col-12 text-center mt-4">
-                <h5>Hai indovinato&#58;</h5>
+                <h5 class="display-4">Hai indovinato&#58;</h5>
                 <p id="numInd"></p>
+                <img src="./img/brain-training.png" alt="">
             </div>
         </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
+
+
 
 </html>
