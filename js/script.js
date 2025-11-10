@@ -28,7 +28,7 @@ const memo5 = document.querySelector("#memo5")
 
 const numGen = [];
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 20; i++) {
     const num = Math.floor(Math.random() * 99) + 1;
     if (!numGen.includes(num)) {
         numGen.push(num);
